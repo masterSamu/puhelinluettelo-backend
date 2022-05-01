@@ -8,8 +8,6 @@ const personSchema = new mongoose.Schema({
   name: { type: String, minlength: 3, required: true },
   number: {
     type: String,
-    minlength: 8,
-    required: true,
     validate: {
       validator: (value) => {
         return /\b\d{2,3}-\d{6,8}\b/.test(value);
